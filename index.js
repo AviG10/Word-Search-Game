@@ -196,7 +196,7 @@ function placeCorrectLetters(myArr)
                 // console.log(item);
                 $(".individual:eq(" + (newStart + nextPosition) + ")" ).html(item);
                 $(".individual:eq(" + (newStart + nextPosition) + ")" ).attr("data-word",myArr[i]);
-                //$(".individual:eq(" + (newStart + nextPosition) + ")" ).css("background","pink");
+                $(".individual:eq(" + (newStart + nextPosition) + ")" ).css("background","pink");
                 nextPosition += nextLetter;
             })
         }
