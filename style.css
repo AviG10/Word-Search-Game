@@ -1,0 +1,48 @@
+
+#container{
+    width: 810px;
+    height: 650px;
+    margin: 0px auto;
+}
+
+#hint{
+    width:200px;
+    height: 570px;
+    float :left; 
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid black;
+}
+
+#letters{
+    width: 580px;
+    height: 580px;
+    float: right;
+}
+
+.individual{
+    width: 40px;
+    height: 40px;
+    float: left;
+    border:1px solid black;
+    border-radius: 2px;
+    font-size: 25px;
+    text-align: center;
+    margin: 3px;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.colorPurple{
+    background-color: aqua;
+}
+
+.correctlySelected{
+    background: silver;
+}
+
+#message{
+    color:red;
+}
