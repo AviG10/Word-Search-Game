@@ -16,7 +16,7 @@ $(document).ready(function(){
     $(document).keydown(function(){
         // var len = selectedWord.length;
         // console.log("Avijit");
-        selectedWord = "";
+//         selectedWord = "";
         $(".individual").removeClass("colorPurple");
     }).keyup(function(){
         if(myWords.indexOf(selectedWord) >= 0){
@@ -37,6 +37,7 @@ $(document).ready(function(){
                 }
             });
         }
+        selectedWord = "";
     });    
 });
 
