@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Word Search Game</title>
+</head>
+<body>
+    <nav class="navbar" >
+        <h2 data-text="WordSearch">WordSearch</h2> 
+    </nav>
+    <div id="container">
+        <div id="hint"></div>
+        
+        <div id="letters"></div>
+
+        <div class="timer">
+
+            <span>Time Remaining</span>
+            
+            <div class="countdown">
+                <div class="day"></div>
+                <div class="hour"></div>
+                <div class="minute"></div>
+                <div class="second"></div>
+            </div>
+
+        </div>
+        
+        <div class="score">
+            <!-- <h2>Score</h2> -->
+            <h1>Score</h1>
+            <p id= "score">0</p>
+        </div>
+
+        <div class="submit">
+            <button onclick="reload()">submit</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
