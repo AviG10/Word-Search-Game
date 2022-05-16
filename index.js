@@ -27,7 +27,7 @@ let counter = setInterval(() => {
     document.querySelector(".second").innerHTML = seconds < 10 ? `0${seconds}` : seconds;
     
 
-    if (dateDiff < 0) {
+    if (dateDiff <= 0) {
         // console.log("ENDED");
         window.location.reload();
         // clearInterval(counter);
@@ -39,7 +39,7 @@ function reload(){
 }
 
 
-var myWords = ["EGG","MILK","BUTTER","JAM","OATS","SUGAR","BREAD","RUSK"];
+var myWords = ["EGG","MILK","BUTTER","JAM","OATS","SUGAR","BREAD","RUSK","ROLL","PRETTY","DICE"];
 
 
 var tempWords = [];
@@ -51,6 +51,7 @@ var tempCol = -1;
 var pos = true;
 var cur = -1;
 var prev = -1;
+var cnt = 0;
 
 $(document).ready(function(){
     arrangeGame();
@@ -74,7 +75,7 @@ $(document).ready(function(){
 
             $(this).addClass("colorPurple");
             selectedWord += $(this).html();
-            console.log(selectedWord);
+            // console.log(selectedWord);
         }
         else{
             prev = cur;
@@ -88,14 +89,18 @@ $(document).ready(function(){
 
                 $(this).addClass("colorPurple");
                 selectedWord += $(this).html();
-                console.log(selectedWord);
+                // console.log(selectedWord);
             }
         }
     });
 
     $(document).keydown(function(){
-        $(".individual").removeClass("colorPurple");
+        if(cnt == 1){
+            $(".individual").removeClass("colorPurple");
+        }
+        cnt = 0;
     }).keyup(function(){
+        cnt = 1;
         var local = selectedWord;
 
         if(selectedWord.length > 2){
@@ -113,10 +118,10 @@ $(document).ready(function(){
                         $(".colorPurple").addClass("correctlySelected");
                         $(this).addClass("done");
                         doneWord.push(local);
-                        console.log(doneWord);
+                        // console.log(doneWord);
                         score += 1 ; 
                         document.getElementById("score").innerHTML = score;
-                        console.log(score);
+                        // console.log(score);
                     }
             }).catch((error) => {});
         }
